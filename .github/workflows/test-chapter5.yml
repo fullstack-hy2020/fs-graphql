@@ -4,6 +4,7 @@ on:
   # push:
   #   branches: [ main, master ]
   workflow_dispatch:
+  
 
 jobs:
   e2e-tests:
@@ -29,10 +30,6 @@ jobs:
       - name: Install E2E test dependencies
         working-directory: tests-chapter5
         run: npm ci
-
-      - name: Install Playwright browsers
-        working-directory: tests-chapter5
-        run: npx playwright install chromium --with-deps
 
       - name: Run E2E tests
         working-directory: tests-chapter5
